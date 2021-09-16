@@ -2,7 +2,7 @@
 
   https://volcano-recess-d5e.notion.site/1-cf94d173cb684a3081287d744d29a07b
 
-- ERM
+- ERD
 
   <img width="419" alt="ERD" src="https://user-images.githubusercontent.com/62883948/133583839-647c5966-a74e-43e3-b9bc-44d77194cc96.png">
 
