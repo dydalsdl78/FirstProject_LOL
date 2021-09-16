@@ -1,12 +1,16 @@
 package com.myapp.model;
 
-import com.strategy.attack.SwordAttack;
-import com.strategy.defense.ArmorDefense;
-import com.strategy.defense.ShieldDefense;
+import com.myapp.strategy.attack.SwordAttack;
+import com.myapp.strategy.defense.ArmorDefense;
+import com.myapp.strategy.defense.ShieldDefense;
 
 public class JUNGLEChampion extends ChampionVO {
 	
-	public JUNGLEChampion() {
+	public JUNGLEChampion(String name, int attack, int defense, int position) {
+		super.setChampionName(name);
+		super.setChampionAttack(attack);
+		super.setChampionDefense(defense);
+		super.setChampionPosition(position);
 		attackBehavior = new SwordAttack();
 		defenseBehavior = new ShieldDefense();
 	}

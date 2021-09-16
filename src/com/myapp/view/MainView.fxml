@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane minHeight="400.0" minWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.myapp.controller.MainController">
+   <children>
+      <Button fx:id="crudBtn" layoutX="259.0" layoutY="189.0" mnemonicParsing="false" prefHeight="23.0" prefWidth="83.0" text="go to crud" />
+      <Button fx:id="gameBtn" layoutX="259.0" layoutY="235.0" mnemonicParsing="false" text="go to game" />
+      <Text layoutX="134.0" layoutY="129.0" strokeType="OUTSIDE" strokeWidth="0.0" text="LOL Random Game" wrappingWidth="333.4010009765625">
+         <font>
+            <Font size="36.0" />
+         </font>
+      </Text>
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="34.0" layoutY="200.0" pickOnBounds="true" preserveRatio="true" />
+   </children>
+</AnchorPane>

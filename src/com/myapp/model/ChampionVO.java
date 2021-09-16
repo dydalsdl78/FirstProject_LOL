@@ -1,7 +1,7 @@
 package com.myapp.model;
 
-import com.strategy.attack.AttackBehavior;
-import com.strategy.defense.DefenseBehavior;
+import com.myapp.strategy.attack.AttackBehavior;
+import com.myapp.strategy.defense.DefenseBehavior;
 
 import javafx.beans.property.IntegerProperty;
 import javafx.beans.property.SimpleDoubleProperty;
@@ -20,9 +20,10 @@ public class ChampionVO {
 	private StringProperty championName;
 	private IntegerProperty championAttack;
 	private IntegerProperty championDefense;
-	private StringProperty championPosition;
-	private StringProperty attackType;
-	private StringProperty defenseType;
+	private IntegerProperty championPosition;
+	private StringProperty championPositionName;
+	private StringProperty championAttackType;
+	private StringProperty championDefenseType;
 
 	AttackBehavior attackBehavior;
 	DefenseBehavior defenseBehavior;
@@ -32,7 +33,10 @@ public class ChampionVO {
         this.championName = new SimpleStringProperty();
         this.championAttack = new SimpleIntegerProperty();
         this.championDefense = new SimpleIntegerProperty();
-        this.championPosition = new SimpleStringProperty();
+        this.championPosition = new SimpleIntegerProperty();
+        this.championPositionName = new SimpleStringProperty();
+        this.championAttackType = new SimpleStringProperty();
+        this.championDefenseType = new SimpleStringProperty();
     }
 	
 	public void display() {
@@ -40,11 +44,11 @@ public class ChampionVO {
 	};
 	
 	public void performAttackBehavior() {
-		attackBehavior.attack();
+		attackBehavior.select();
 	}
 	
 	public void performDefenseBehavior() {
-		defenseBehavior.defense();
+		defenseBehavior.select();
 	}
 	
 	
@@ -106,19 +110,51 @@ public class ChampionVO {
 
 	
 	// ChampionPosition
-	public StringProperty getChampionPositionProperty() {
+	public IntegerProperty getChampionPositionProperty() {
 		return championPosition;
 	}
 
-	public void setChampionPosition(String championPosition) {
+	public void setChampionPosition(int championPosition) {
 		this.championPosition.set(championPosition);
 	}
 	
-	public String getChampionPosition() {
+	public int getChampionPosition() {
 		return championPosition.get();
 	}
 
+	// ChampionPositionName
+	public StringProperty getChampionPositionNameProperty() {
+		return championPositionName;
+	}
+	public void setChampionPositionName(String championPositionName) {
+		this.championPositionName.set(championPositionName);
+	}
 	
+	public String getChampionPositionName() {
+		return championPositionName.get();
+	}
 	
-		
+	// ChampionAttackType
+	public StringProperty getChampionAttackTypeProperty() {
+		return championAttackType;
+	}
+	public void setChampionAttackType(String championAttackType) {
+		this.championAttackType.set(championAttackType);
+	}
+	
+	public String getChampionAttackType() {
+		return championAttackType.get();
+	}
+	
+	// ChampionDefenseType
+	public StringProperty getChampionDefenseTypeProperty() {
+		return championDefenseType;
+	}
+	public void setChampionDefenseType(String championDefenseType) {
+		this.championDefenseType.set(championDefenseType);
+	}
+	
+	public String getChampionDefenseType() {
+		return championDefenseType.get();
+	}
 }

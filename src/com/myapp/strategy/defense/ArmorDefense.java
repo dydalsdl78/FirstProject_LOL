@@ -1,8 +1,8 @@
-package com.strategy.defense;
+package com.myapp.strategy.defense;
 
 public class ArmorDefense implements DefenseBehavior {
 	@Override
-	public void defense() {
+	public void select() {
 		System.out.println("°©¿ÊÀ¸·Î ¹æ¾îÇÕ´Ï´Ù.");
 	}
 }

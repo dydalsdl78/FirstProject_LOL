@@ -1,13 +1,17 @@
 package com.myapp.model;
 
-import com.strategy.attack.RifleAttack;
-import com.strategy.attack.SwordAttack;
-import com.strategy.defense.ArmorDefense;
-import com.strategy.defense.AvoidDefense;
+import com.myapp.strategy.attack.RifleAttack;
+import com.myapp.strategy.attack.SwordAttack;
+import com.myapp.strategy.defense.ArmorDefense;
+import com.myapp.strategy.defense.AvoidDefense;
 
 public class BOTTOMChampion extends ChampionVO {
 	
-	public BOTTOMChampion() {
+	public BOTTOMChampion(String name, int attack, int defense, int position) {
+		super.setChampionName(name);
+		super.setChampionAttack(attack);
+		super.setChampionDefense(defense);
+		super.setChampionPosition(position);
 		attackBehavior = new RifleAttack();
 		defenseBehavior = new AvoidDefense();
 	}

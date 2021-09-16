@@ -1,13 +1,13 @@
 package com.myapp.model;
 
-import com.strategy.attack.MagicAttack;
-import com.strategy.attack.SwordAttack;
-import com.strategy.defense.ArmorDefense;
-import com.strategy.defense.AvoidDefense;
+import com.myapp.strategy.attack.MagicAttack;
+import com.myapp.strategy.attack.SwordAttack;
+import com.myapp.strategy.defense.ArmorDefense;
+import com.myapp.strategy.defense.AvoidDefense;
 
 public class MIDChampion extends ChampionVO {
 	
-	public MIDChampion(String name, int attack, int defense, String position) {
+	public MIDChampion(String name, int attack, int defense, int position) {
 		super.setChampionName(name);
 		super.setChampionAttack(attack);
 		super.setChampionDefense(defense);
