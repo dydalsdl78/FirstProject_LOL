@@ -14,4 +14,3 @@
 
   ![1차 프로젝트 목업 수정안](https://user-images.githubusercontent.com/62883948/133583717-0dacfdb5-1a83-4dab-888d-34939595075d.png)
 
-박지훈2
