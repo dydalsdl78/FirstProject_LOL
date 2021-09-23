@@ -7,6 +7,7 @@ import com.myapp.strategy.defense.AvoidDefense;
 
 public class MIDChampion extends ChampionVO {
 	
+	// 생성자
 	public MIDChampion(String name, int attack, int defense, int position) {
 		super.setChampionName(name);
 		super.setChampionAttack(attack);
@@ -14,11 +15,6 @@ public class MIDChampion extends ChampionVO {
 		super.setChampionPosition(position);
 		attackBehavior = new MagicAttack();
 		defenseBehavior = new AvoidDefense();
-	}
-
-	@Override
-	public void display() {
-		System.out.println("MID 포지션 챔피언이 생성됩니다.");
 	}
 
 }

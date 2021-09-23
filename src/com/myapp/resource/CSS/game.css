@@ -1,0 +1,25 @@
+
+.button {
+	-fx-font-size: 12pt;
+	-fx-font-family: "Friz Quadrata";
+}
+
+.label {
+	-fx-font-size: 15pt;
+	-fx-font-family: "Friz Quadrata";
+}
+
+#player1_Label {
+	-fx-font-size: 25pt;
+	-fx-font-family: "Friz Quadrata";
+}
+
+#player2_Label {
+	-fx-font-size: 25pt;
+	-fx-font-family: "Friz Quadrata";
+}
+
+#gameResultText {
+		-fx-font-size: 25pt;
+	-fx-font-family: "Friz Quadrata";
+}

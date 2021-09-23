@@ -6,6 +6,7 @@ import com.myapp.strategy.defense.ShieldDefense;
 
 public class JUNGLEChampion extends ChampionVO {
 	
+	// 생성자
 	public JUNGLEChampion(String name, int attack, int defense, int position) {
 		super.setChampionName(name);
 		super.setChampionAttack(attack);
@@ -14,9 +15,5 @@ public class JUNGLEChampion extends ChampionVO {
 		attackBehavior = new SwordAttack();
 		defenseBehavior = new ShieldDefense();
 	}
-	
-	@Override
-	public void display() {
-		System.out.println("JUNGLE 포지션 챔피언이 생성됩니다.");
-	}
+
 }

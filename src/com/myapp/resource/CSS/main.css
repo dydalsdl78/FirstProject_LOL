@@ -1,0 +1,30 @@
+#crudBtn {
+	-fx-background-radius: 10;
+}
+
+#crudBtn:hover {
+	-fx-background-color: linear-gradient(#2A5058, #61a2b1);
+}
+
+#gameBtn {
+	-fx-background-radius: 10;
+}
+
+#gameBtn:pressed {
+	-fx-background-color: linear-gradient(#2A5058, #61a2b1);
+}
+
+#titleLabel {
+	-fx-font-size: 20pt;
+	-fx-font-family: "Friz Quadrata";
+}
+
+#subTitleLabel {
+	-fx-font-size: 10pt;
+	-fx-font-family: "Friz Quadrata";
+}
+
+.button {
+	-fx-font-size: 12pt;
+	-fx-font-family: "Friz Quadrata";
+}

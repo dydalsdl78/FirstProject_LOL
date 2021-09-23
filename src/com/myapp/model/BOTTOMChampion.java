@@ -7,6 +7,7 @@ import com.myapp.strategy.defense.AvoidDefense;
 
 public class BOTTOMChampion extends ChampionVO {
 	
+	// 생성자
 	public BOTTOMChampion(String name, int attack, int defense, int position) {
 		super.setChampionName(name);
 		super.setChampionAttack(attack);
@@ -14,11 +15,6 @@ public class BOTTOMChampion extends ChampionVO {
 		super.setChampionPosition(position);
 		attackBehavior = new RifleAttack();
 		defenseBehavior = new AvoidDefense();
-	}
-
-	@Override
-	public void display() {
-		System.out.println("BOTTOM 포지션 챔피언이 생성됩니다.");
 	}
 
 }

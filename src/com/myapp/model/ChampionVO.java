@@ -14,7 +14,6 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @AllArgsConstructor
-//@NoArgsConstructor
 public class ChampionVO {
 	private IntegerProperty championId;
 	private StringProperty championName;
@@ -24,6 +23,9 @@ public class ChampionVO {
 	private StringProperty championPositionName;
 	private StringProperty championAttackType;
 	private StringProperty championDefenseType;
+	private StringProperty championImage;
+	private StringProperty championURL;
+	
 
 	AttackBehavior attackBehavior;
 	DefenseBehavior defenseBehavior;
@@ -37,11 +39,9 @@ public class ChampionVO {
         this.championPositionName = new SimpleStringProperty();
         this.championAttackType = new SimpleStringProperty();
         this.championDefenseType = new SimpleStringProperty();
+        this.championImage = new SimpleStringProperty();
+        this.championURL = new SimpleStringProperty();
     }
-	
-	public void display() {
-		
-	};
 	
 	public void performAttackBehavior() {
 		attackBehavior.select();
@@ -156,5 +156,29 @@ public class ChampionVO {
 	
 	public String getChampionDefenseType() {
 		return championDefenseType.get();
+	}
+	
+	// ChampionImageURL
+	public StringProperty getChampionImageProperty() {
+		return championDefenseType;
+	}
+	public void setChampionImage(String championImage) {
+		this.championImage.set(championImage);
+	}
+	
+	public String getChampionImage() {
+		return championImage.get();
+	}
+		
+	// ChampionURL
+	public StringProperty getChampionURLProperty() {
+		return championURL;
+	}
+	public void setChampionURL(String championURL) {
+		this.championURL.set(championURL);
+	}
+	
+	public String getChampionURL() {
+		return championURL.get();
 	}
 }

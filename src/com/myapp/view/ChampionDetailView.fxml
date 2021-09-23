@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+
+<AnchorPane minHeight="600.0" minWidth="400.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.171" fx:controller="com.myapp.controller.ChampionDetailController">
+   <children>
+      <VBox alignment="CENTER" prefHeight="600.0" prefWidth="400.0">
+         <children>
+            <ImageView fx:id="championDetailImage" fitHeight="498.0" fitWidth="399.0" pickOnBounds="true" preserveRatio="true" />
+            <Label fx:id="championDetailName" text="이름" />
+            <Label fx:id="championDetailAttackPoint" text="공격 포인트" />
+            <Label fx:id="championDetailDefensePoint" text="방어 포인트" />
+            <HBox alignment="CENTER" prefHeight="44.0" prefWidth="400.0">
+               <children>
+                  <Label fx:id="championDetailPosition" text="포지션" />
+                  <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+                     <children>
+                        <Label fx:id="championDetailAttackType" text="공격타입" />
+                        <Label fx:id="championDetailDefenseType" text="방어타입" />
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+            <Label fx:id="championDetailURL" text="스토리 url" />
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

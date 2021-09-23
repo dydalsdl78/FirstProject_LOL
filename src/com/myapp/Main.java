@@ -1,53 +1,50 @@
 package com.myapp;
 
-import java.io.File;
 import java.io.IOException;
 
-import com.myapp.controller.MainController;
-
 import javafx.application.Application;
-import javafx.event.ActionEvent;
-import javafx.event.EventHandler;
-import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.image.Image;
 import javafx.scene.layout.AnchorPane;
-import javafx.scene.layout.BorderPane;
+import javafx.scene.text.Font;
 import javafx.stage.Stage;
-import javafx.scene.Parent;
+import javafx.stage.StageStyle;
 
 public class Main extends Application {
 	
 	private Stage primaryStage;
     private AnchorPane rootLayout;
-    private Button changeBtn;
-
+    
     @Override
     public void start(Stage primaryStage) throws Exception {
         this.primaryStage = primaryStage;
-
-        this.primaryStage.setTitle("LOL Champion Game");
+        // 제목 설정
+        this.primaryStage.setTitle("LEAGUE OF LEGENDS RANDOM CARD GAME");
+        // 스타일 설정
+        this.primaryStage.initStyle(StageStyle.UNDECORATED);
         
-        // 이미지
-//        File imageFile = new File("../../../resource/main.jpg");
-//        MainController m = new MainController();
-//        m.initImage();
-
         initRootLayout();
         
     }
     
     public void initRootLayout() {
         try {
-            // fxml 파일 읽기
-            FXMLLoader loader = new FXMLLoader();
+            
+        	// 외부 font 읽기
+        	Font.loadFont(getClass().getResourceAsStream("Friz Quadrata Regular.ttf"), 10);
+        	
+        	// fxml 파일 읽고 load
+        	FXMLLoader loader = new FXMLLoader();
             loader.setLocation(Main.class.getResource("view/MainView.fxml"));
-
             rootLayout = (AnchorPane) loader.load();
+            
             // scene 적용
             Scene scene = new Scene(rootLayout); 
             primaryStage.setScene(scene); 
+            primaryStage.setResizable(false);
+            primaryStage.getIcons().add(new Image("com/myapp/resource/Image/icon2.png"));
             
             // 윈도우 보여주기
             primaryStage.show();

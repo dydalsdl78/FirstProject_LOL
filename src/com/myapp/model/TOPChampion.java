@@ -5,6 +5,7 @@ import com.myapp.strategy.defense.ArmorDefense;
 
 public class TOPChampion extends ChampionVO {
 	
+	// 생성자
 	public TOPChampion(String name, int attack, int defense, int position) {
 		super.setChampionName(name);
 		super.setChampionAttack(attack);
@@ -12,11 +13,6 @@ public class TOPChampion extends ChampionVO {
 		super.setChampionPosition(position);
 		attackBehavior = new SwordAttack();
 		defenseBehavior = new ArmorDefense();
-	}
-
-	@Override
-	public void display() {
-		System.out.println("TOP 포지션 챔피언이 생성됩니다.");
 	}
 
 }
